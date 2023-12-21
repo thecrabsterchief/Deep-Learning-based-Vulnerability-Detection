@@ -54,7 +54,7 @@ class NodesEmbedding:
         vectors = []
 
         for token in tokenized_code:
-            if token in self.w2v_keyed_vectors.vocab:
+            if token in self.w2v_keyed_vectors.key_to_index:
                 vectors.append(self.w2v_keyed_vectors[token])
             else:
                 # print(node.label, token, node.get_code(), tokenized_code)
